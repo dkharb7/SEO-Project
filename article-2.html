@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optimizing Data Quality Governance for Beginners — Dikshant Kharb</title>
+    <meta name="description" content="A beginner-friendly guide to data quality governance — covering the six quality dimensions, building a practical framework, common pitfalls, and tools to get started.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="site-nav">
+        <div class="wrap nav-inner">
+            <a href="index.html" class="logo">dikshant<em>.</em></a>
+            <button class="menu-toggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="nav-menu">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="articles.html" class="current">Articles</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+        <div class="nav-overlay"></div>
+    </header>
+
+    <main>
+        <article class="wrap article-page">
+            <div class="article-body">
+                <div class="article-nav">
+                    <a href="articles.html">← All articles</a>
+                    &nbsp;&nbsp;·&nbsp;&nbsp;
+                    <a href="article-1.html">Prev: Predictive Analytics in Real Estate</a>
+                </div>
+
+                <h1>Optimizing Data Quality Governance for Beginners</h1>
+                <p class="article-lead">A practical, step-by-step guide to understanding and implementing data quality governance in your projects and organization.</p>
+
+                <h2>Why Data Quality Governance Matters</h2>
+                <p>Every data-driven decision is only as good as the data behind it. Data quality governance is the set of processes, standards, and responsibilities that ensure data remains accurate, consistent, complete, and timely.</p>
+                <p>Poor data quality costs businesses an estimated $12.9 million annually, according to Gartner. For students and early-career professionals, understanding governance is a practical skill that separates reliable analysis from misleading conclusions.</p>
+
+                <h2>Core Dimensions of Data Quality</h2>
+                <p>Before you can govern data quality, you need to understand what "quality" means. Here are the six core dimensions:</p>
+
+                <h3>1. Accuracy</h3>
+                <p>Does the data correctly represent the real-world entity? A customer address with a typo is inaccurate even though it exists.</p>
+
+                <h3>2. Completeness</h3>
+                <p>Are all required fields populated? Missing values are among the most common issues. In my <a href="index.html#projects">Mental Health Data Visualisation project</a>, handling missing data was a critical first step.</p>
+
+                <h3>3. Consistency</h3>
+                <p>Is the same data represented the same way across systems? A date stored as "05/01/2025" in one database and "2025-01-05" in another creates problems.</p>
+
+                <h3>4. Timeliness</h3>
+                <p>Is the data current enough? Real-time dashboards require near-instant data, while quarterly reports can tolerate batch updates.</p>
+
+                <h3>5. Validity</h3>
+                <p>Does the data conform to defined formats and business rules? An email field containing a phone number is a validity issue.</p>
+
+                <h3>6. Uniqueness</h3>
+                <p>Are there duplicate records? Duplicates inflate metrics, skew analysis, and waste storage.</p>
+
+                <h2>Building a Data Quality Framework</h2>
+                <p>A governance framework doesn't need to be complex. Here's a practical approach:</p>
+
+                <h3>Step 1: Define Ownership</h3>
+                <p>Every dataset needs a clear owner responsible for its accuracy. In small teams, this might be the analyst who uses the data most.</p>
+
+                <h3>Step 2: Profile Your Data</h3>
+                <p>Examine your data's structure, content, and relationships using:</p>
+                <ul>
+                    <li><strong>Python:</strong> ydata-profiling generates comprehensive reports on distributions and missing values.</li>
+                    <li><strong>Power BI:</strong> Column Quality and Column Profile in Power Query provide visual profiling.</li>
+                    <li><strong>SQL:</strong> COUNT, DISTINCT, and NULL checks reveal a lot about data health.</li>
+                </ul>
+
+                <h3>Step 3: Establish Rules</h3>
+                <p>Document expected formats and constraints:</p>
+                <ul>
+                    <li>Phone numbers must be 10 digits</li>
+                    <li>Emails must contain @ and a valid domain</li>
+                    <li>Dates must follow ISO 8601 (YYYY-MM-DD)</li>
+                    <li>Revenue figures must be non-negative</li>
+                </ul>
+
+                <h3>Step 4: Implement Validation</h3>
+                <p>Automate quality checks at data entry and during ETL pipelines. Python scripts can validate incoming data, flag exceptions, and route issues for review.</p>
+
+                <h3>Step 5: Monitor and Measure</h3>
+                <p>Track quality metrics over time. Build a dashboard using <a href="index.html#projects">Power BI or Python</a> showing completeness, error rates, and trends.</p>
+
+                <h2>Common Pitfalls</h2>
+                <ul>
+                    <li><strong>Ignoring the problem:</strong> Assuming data is clean because it loads without errors.</li>
+                    <li><strong>Over-engineering:</strong> Don't build enterprise-grade governance for a personal project.</li>
+                    <li><strong>Cleaning without preventing:</strong> One-time cleaning is temporary. Sustainable quality requires upstream validation.</li>
+                    <li><strong>Skipping documentation:</strong> Future you will struggle without clear data definitions and rules.</li>
+                </ul>
+
+                <h2>Tools for Getting Started</h2>
+                <ul>
+                    <li><strong>Python + Pandas:</strong> Profiling, cleaning, and validation</li>
+                    <li><strong>Great Expectations:</strong> Open-source library for data validation</li>
+                    <li><strong>Power BI:</strong> Quality monitoring dashboards</li>
+                    <li><strong>Excel / Google Sheets:</strong> Data dictionaries and rule docs</li>
+                    <li><strong>dbt:</strong> Data tests in transformation layers</li>
+                </ul>
+
+                <div class="faq">
+                    <h2>Frequently Asked Questions</h2>
+                    <div class="faq-entry">
+                        <h4>What is data governance vs. data quality?</h4>
+                        <p>Data governance is the broader framework of policies and processes. Data quality is one component, focused on accuracy, completeness, and reliability.</p>
+                    </div>
+                    <div class="faq-entry">
+                        <h4>Do I need programming skills?</h4>
+                        <p>Not for basic tasks — Excel and Power BI work well. But Python and SQL expand your capabilities significantly, especially for automation.</p>
+                    </div>
+                    <div class="faq-entry">
+                        <h4>How do I measure data quality?</h4>
+                        <p>Common metrics: completeness rate, accuracy rate, consistency rate, and timeliness of the most recent update.</p>
+                    </div>
+                    <div class="faq-entry">
+                        <h4>What should a beginner do first?</h4>
+                        <p>Profile a dataset you work with regularly. Use Pandas or Power Query to find missing values and inconsistencies. That awareness alone improves your work.</p>
+                    </div>
+                </div>
+
+                <div class="cta">
+                    <h3>See data quality in practice</h3>
+                    <p>Explore my <a href="index.html#projects">project portfolio</a> or read about <a href="article-1.html">Predictive Analytics in Real Estate</a>.</p>
+                    <a href="contact.html" class="btn btn-dark">Get in touch</a>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap footer-inner">
+            <div class="footer-brand">
+                <h3>Dikshant Kharb</h3>
+                <p>Data Science & Front-End</p>
+            </div>
+            <nav class="footer-nav">
+                <a href="https://linkedin.com/in/dikshant-kharb-333011280" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="mailto:kharbdikshant@gmail.com">Email</a>
+                <a href="articles.html">Articles</a>
+            </nav>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>

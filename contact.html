@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact — Dikshant Kharb</title>
+    <meta name="description" content="Get in touch with Dikshant Kharb for collaboration, internship opportunities, or inquiries about data science and front-end development.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="site-nav">
+        <div class="wrap nav-inner">
+            <a href="index.html" class="logo">dikshant<em>.</em></a>
+            <button class="menu-toggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="nav-menu">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="articles.html">Articles</a>
+                <a href="contact.html" class="current">Contact</a>
+            </nav>
+        </div>
+        <div class="nav-overlay"></div>
+    </header>
+
+    <main>
+        <section class="page-header wrap">
+            <p class="hero-label">Contact</p>
+            <h1>Let's connect.</h1>
+            <p>Have a project idea, an internship opportunity, or just want to talk data? I'd be happy to hear from you.</p>
+        </section>
+
+        <section class="wrap fade-up" style="padding-top: 0;">
+            <div class="grid-2">
+                <!-- Form -->
+                <div class="card-flat">
+                    <h2 style="margin-bottom: 1.4rem;">Send a message</h2>
+                    <form id="contact-form">
+                        <div class="form-row">
+                            <label for="field-name">Name</label>
+                            <input type="text" id="field-name" name="name" placeholder="Your name" required>
+                        </div>
+                        <div class="form-row">
+                            <label for="field-email">Email</label>
+                            <input type="email" id="field-email" name="email" placeholder="you@example.com" required>
+                        </div>
+                        <div class="form-row">
+                            <label for="field-subject">Subject</label>
+                            <input type="text" id="field-subject" name="subject" placeholder="What's this about?">
+                        </div>
+                        <div class="form-row">
+                            <label for="field-message">Message</label>
+                            <textarea id="field-message" name="message" placeholder="Your message..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-dark" style="width: 100%;">Send message</button>
+                        <div class="form-msg"></div>
+                    </form>
+                </div>
+
+                <!-- Info -->
+                <div>
+                    <div class="card-flat" style="margin-bottom: 1.4rem;">
+                        <h3>Direct contact</h3>
+                        <div style="margin-top: 1.2rem;">
+                            <div class="contact-detail">
+                                <p class="muted">Email</p>
+                                <a href="mailto:kharbdikshant@gmail.com">kharbdikshant@gmail.com</a>
+                            </div>
+                            <div class="contact-detail">
+                                <p class="muted">Phone</p>
+                                <a href="tel:+919073000098">+91 9073000098</a>
+                            </div>
+                            <div class="contact-detail">
+                                <p class="muted">Location</p>
+                                <span>Hisar, Haryana, India</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-flat" style="margin-bottom: 1.4rem;">
+                        <h3>On the web</h3>
+                        <div style="margin-top: 1.2rem;">
+                            <div class="contact-detail">
+                                <p class="muted">LinkedIn</p>
+                                <a href="https://linkedin.com/in/dikshant-kharb-333011280" target="_blank" rel="noopener noreferrer">linkedin.com/in/dikshant-kharb</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-flat">
+                        <h3>Open to</h3>
+                        <div class="tags">
+                            <span class="tag">Internships</span>
+                            <span class="tag">Freelance</span>
+                            <span class="tag">Collaboration</span>
+                            <span class="tag">Data Analysis</span>
+                            <span class="tag">Web Development</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap footer-inner">
+            <div class="footer-brand">
+                <h3>Dikshant Kharb</h3>
+                <p>Data Science & Front-End</p>
+            </div>
+            <nav class="footer-nav">
+                <a href="https://linkedin.com/in/dikshant-kharb-333011280" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="mailto:kharbdikshant@gmail.com">Email</a>
+                <a href="index.html">Home</a>
+            </nav>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>
