@@ -7,36 +7,166 @@
     <title>Dikshant Kharb — Data Science & Front-End Developer</title>
     <meta name="description"
         content="Portfolio of Dikshant Kharb, a B.Tech Computer Science student at UPES specializing in data analysis, visualization, and front-end development.">
-    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Base Styles */
+        :root {
+            --text: #1a1a1a;
+            --muted: #666;
+            --bg: #ffffff;
+            --accent: #f4f4f4;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            color: var(--text);
+            background-color: var(--bg);
+            line-height: 1.6;
+        }
+
+        .wrap {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Navigation */
+        .site-nav {
+            padding: 1.5rem 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .nav-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            text-decoration: none;
+            color: var(--text);
+        }
+
+        .logo em { color: #888; font-style: normal; }
+
+        .nav-menu a {
+            margin-left: 2rem;
+            text-decoration: none;
+            color: var(--muted);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-menu a:hover, .nav-menu a.current { color: var(--text); }
+
+        /* --- HERO SECTION FIXES --- */
+        .hero { padding: 4rem 0; }
+
+        .hero-inner {
+            display: flex; /* Aligns content and image side-by-side */
+            align-items: center;
+            justify-content: space-between;
+            gap: 4rem;
+        }
+
+        .hero-content {
+            flex: 1.2; /* Takes up slightly more width than the image */
+        }
+
+        .hero-label {
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            letter-spacing: 0.1em;
+            color: var(--muted);
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 3.5rem;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-text {
+            font-size: 1.1rem;
+            color: var(--muted);
+            max-width: 500px;
+            margin-bottom: 2rem;
+        }
+
+        /* Buttons */
+        .hero-btns { display: flex; gap: 1rem; }
+
+        .btn {
+            padding: 0.8rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .btn-dark { background: #1a1a1a; color: white; }
+        .btn-outline { border: 1px solid #ddd; color: var(--text); }
+        .btn-dark:hover { background: #333; }
+
+        /* Image Styling */
+        .hero-image {
+            flex: 0.8;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .hero-image img {
+            width: 100%;
+            max-width: 440px; /* Constrains the size so it's not too big */
+            height: auto;
+            border-radius: 32px; /* Smooth rounded corners from the screenshot */
+            aspect-ratio: 1 / 1; /* Makes it a square */
+            object-fit: cover; /* Prevents stretching */
+            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            h1 { font-size: 2.5rem; }
+            .hero-inner { gap: 2rem; }
+        }
+
+        @media (max-width: 768px) {
+            .hero-inner {
+                flex-direction: column; /* Stacks image under text on mobile */
+                text-align: center;
+            }
+            .hero-text { margin: 0 auto 2rem; }
+            .hero-btns { justify-content: center; }
+            .hero-image { justify-content: center; }
+        }
+    </style>
 </head>
 
 <body>
 
-    <!-- Navigation -->
     <header class="site-nav">
         <div class="wrap nav-inner">
             <a href="index.html" class="logo">dikshant<em>.</em></a>
-            <button class="menu-toggle" aria-label="Toggle navigation">
-                <span></span><span></span><span></span>
-            </button>
             <nav class="nav-menu">
                 <a href="index.html" class="current">Home</a>
                 <a href="about.html">About</a>
                 <a href="articles.html">Articles</a>
                 <a href="contact.html">Contact</a>
-
             </nav>
         </div>
-        <div class="nav-overlay"></div>
     </header>
 
     <main>
-        <!-- Hero -->
         <section class="hero wrap">
             <div class="hero-inner">
                 <div class="hero-content">
@@ -51,123 +181,13 @@
                         <a href="about.html" class="btn btn-outline">My journey</a>
                     </div>
                 </div>
+                <!-- This section now sits on the right -->
                 <div class="hero-image">
                     <img src="IMG_1978.jpg" alt="Dikshant Kharb">
                 </div>
             </div>
         </section>
-
-        <!-- Background & Skills -->
-        <section class="wrap fade-up" id="skills">
-            <div class="section-intro">
-                <h2>Background & Skills</h2>
-                <p>A CS degree meets hands-on data work.</p>
-            </div>
-
-            <div class="grid-2">
-                <div class="card">
-                    <h3>Education</h3>
-                    <div style="margin-top: 1.2rem;">
-                        <h4>B.Tech in Computer Science & Engineering</h4>
-                        <p class="muted">UPES, Dehradun · Jul 2023 – Present</p>
-                        <p style="margin-top: 0.3rem; color: var(--text);">CGPA: 7.70 / 10</p>
-                    </div>
-                    <div style="margin-top: 1.2rem;">
-                        <h4>12th CBSE</h4>
-                        <p class="muted">The Aryan School · 73%</p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <h3>What I work with</h3>
-                    <div class="tags">
-                        <span class="tag">Python</span>
-                        <span class="tag">SQL</span>
-                        <span class="tag">Power BI</span>
-                        <span class="tag">DAX</span>
-                        <span class="tag">Pandas</span>
-                        <span class="tag">Matplotlib</span>
-                        <span class="tag">HTML & CSS</span>
-                        <span class="tag">JavaScript</span>
-                        <span class="tag">C / C++</span>
-                        <span class="tag">Java</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Projects -->
-        <section class="wrap fade-up" id="projects">
-            <div class="section-intro">
-                <h2>Projects</h2>
-                <p>Some things I've built and worked on recently.</p>
-            </div>
-
-            <div class="project-list">
-                <div class="project">
-                    <span class="project-tech">Python · Pandas · Matplotlib · Seaborn</span>
-                    <h3>Mental Health Data Visualization & Pattern Analysis</h3>
-                    <p>Analyzed datasets to identify psychological patterns and presented findings through clear
-                        visualizations that made complex data accessible.</p>
-                </div>
-                <div class="project">
-                    <span class="project-tech">Power BI · DAX</span>
-                    <h3>Pizza Sales Dashboard & Analysis</h3>
-                    <p>Built an interactive dashboard tracking sales performance, customer trends, and operational
-                        metrics for a restaurant business.</p>
-                </div>
-                <div class="project">
-                    <span class="project-tech">Solution Design · AI · Problem Analysis</span>
-                    <h3>Smart India Hackathon 2025 — AI Waste Detection</h3>
-                    <p>Worked on solution design and problem analysis for an AI-based waste detection system aimed at
-                        improving urban sanitation.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Recent Articles -->
-        <section class="wrap fade-up" id="writing">
-            <div class="section-intro">
-                <h2>Recent Writing</h2>
-                <p>I write about data science topics that interest me.</p>
-            </div>
-
-            <div class="articles-list">
-                <a href="article-1.html" class="article-preview">
-                    <span class="muted">Data Science · Informational</span>
-                    <h3>The Future of Predictive Analytics in Real Estate</h3>
-                    <p>How data-driven forecasting is reshaping property markets, investment strategies, and urban
-                        development decisions.</p>
-                    <span class="read-more">Read article →</span>
-                </a>
-                <a href="article-2.html" class="article-preview">
-                    <span class="muted">Data Science · Tutorial</span>
-                    <h3>Optimizing Data Quality Governance for Beginners</h3>
-                    <p>A practical guide to understanding data quality dimensions, building governance frameworks, and
-                        using accessible tools.</p>
-                    <span class="read-more">Read article →</span>
-                </a>
-            </div>
-        </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="site-footer">
-        <div class="wrap footer-inner">
-            <div class="footer-brand">
-                <h3>Dikshant Kharb</h3>
-                <p>Data Science & Front-End</p>
-            </div>
-            <nav class="footer-nav">
-                <a href="https://linkedin.com/in/dikshant-kharb-333011280" target="_blank"
-                    rel="noopener noreferrer">LinkedIn</a>
-                <a href="mailto:kharbdikshant@gmail.com">Email</a>
-                <a href="about.html">About</a>
-            </nav>
-        </div>
-    </footer>
-
-    <script src="main.js"></script>
 </body>
-
 </html>
